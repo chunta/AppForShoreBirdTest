@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - verbuildno (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - verbuildno (from `.symlinks/plugins/verbuildno/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  verbuildno:
+    :path: ".symlinks/plugins/verbuildno/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  verbuildno: 086aa413a7a8e03d4420a56cac59ba2404c489ab
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.15.2
