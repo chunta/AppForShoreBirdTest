@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:verbuildno/verbuildno.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,6 +57,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final _verbuildnoPlugin = Verbuildno();
+  String _numberOfCore = "Unknown";
+
+  @override
+  void initState() {
+    super.initState();
+    _getNumberOfCore();
+  }
+
+  Future<void> _getNumberOfCore() async {
+      String? core = await _verbuildnoPlugin.getNumberOfCore();
+      setState(() {
+        _numberOfCore = core ?? "Unknown";
+      });
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -105,6 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text('Number Of Core: $_numberOfCore'),
             const Text(
               'You have pushed the button this many times:',
             ),
