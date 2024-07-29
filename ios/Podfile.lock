@@ -1,19 +1,25 @@
 PODS:
+  - cupertino_http (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - verbuildno (0.0.1):
     - Flutter
 
 DEPENDENCIES:
+  - cupertino_http (from `.symlinks/plugins/cupertino_http/ios`)
   - Flutter (from `Flutter`)
   - verbuildno (from `.symlinks/plugins/verbuildno/ios`)
 
 EXTERNAL SOURCES:
+  cupertino_http:
+    :path: ".symlinks/plugins/cupertino_http/ios"
   Flutter:
     :path: Flutter
   verbuildno:
     :path: ".symlinks/plugins/verbuildno/ios"
 
 SPEC CHECKSUMS:
+  cupertino_http: 1a3a0f163c1b26e7f1a293b33d476e0fde7a64ec
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   verbuildno: 086aa413a7a8e03d4420a56cac59ba2404c489ab
 

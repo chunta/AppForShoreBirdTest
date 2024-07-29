@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:verbuildno/verbuildno.dart';
-import 'package:http/http.dart' as http;
+import 'dart:math';
+import 'package:dio/dio.dart';
+import 'package:native_dio_adapter/native_dio_adapter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -69,13 +71,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _makeGetRequest() async {
     try {
-      final response = await http.get(
-          Uri.parse('https://6242f044d126926d0c59a15f.mockapi.io/userprofile'));
+      final dio = Dio();
+      dio.httpClientAdapter = NativeAdapter();
+      final random = Random();
+      final randomQuery = random.nextInt(1000000);
+
+        final response = await dio.get(
+      'https://6242f044d126926d0c59a15f.mockapi.io/userprofile',
+      options: Options(
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        },
+      ),
+    );
       if (response.statusCode == 200) {
         setState(() {
-          _apiResponse = response.body.length <= 200
-              ? response.body
-              : response.body.substring(0, 200) + '$_requestCount...';
+          _apiResponse = response.data.toString().length <= 200
+              ? response.data.toString()
+              : response.data.toString().substring(0, 200) + '$_requestCount...';
         });
       } else {
         setState(() {
