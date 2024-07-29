@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo 1.0.1',
+      title: 'Flutter Demo 1.0.4',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orangeAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo 1.0.3'),
+      home: const MyHomePage(title: 'Flutter Demo 1.0.4'),
     );
   }
 }
@@ -67,10 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> _getNumberOfCore() async {
-      String? core = await _verbuildnoPlugin.getNumberOfCore();
-      setState(() {
-        _numberOfCore = core ?? "Unknown";
-      });
+    String? core = await _verbuildnoPlugin.getNumberOfCore();
+    setState(() {
+      _numberOfCore = core ?? "Unknown";
+    });
   }
 
   void _incrementCounter() {

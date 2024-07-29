@@ -212,10 +212,10 @@ packages:
     dependency: "direct main"
     description:
       name: verbuildno
-      sha256: "4a66db2ffef7ae7fb3f19c23b4e4b73b5e25186da762bbf37cbfe58b88a99cb4"
+      sha256: "7cefeab8748be3486006d4175d3f20a242938bf0130ca29ed27997284a2af5cc"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.4"
+    version: "0.0.5"
   vm_service:
     dependency: transitive
     description:
