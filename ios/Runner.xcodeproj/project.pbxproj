@@ -192,6 +192,7 @@
 			buildPhases = (
 				EBEE57C5B4E35A311EA8A7F7 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
+				F7B727EE2C57B8A60072A52E /* ShellScript */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
@@ -360,6 +361,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F7B727EE2C57B8A60072A52E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define the path to the GeneratedPluginRegistrant file\nGENERATED_PLUGIN_REGISTRANT_PATH=\"${SRCROOT}/Runner/GeneratedPluginRegistrant.m\"\n\n# Define the new filename\nRENAME_FILE_PATH=\"${SRCROOT}/Runner/GeneratedPluginRegistrant.mm\"\n\n# Check if the original file exists\nif [ -f \"$GENERATED_PLUGIN_REGISTRANT_PATH\" ]; then\n    # Rename the file\n    mv \"$GENERATED_PLUGIN_REGISTRANT_PATH\" \"$RENAME_FILE_PATH\"\n    echo \"Renamed GeneratedPluginRegistrant.m to GeneratedPluginRegistrant.mm\"\nelse\n    echo \"GeneratedPluginRegistrant.m does not exist\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
