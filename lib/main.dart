@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orangeAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo 1.0.2+3'),
+      home: const MyHomePage(title: 'Flutter Demo 1.0.3'),
     );
   }
 }
