@@ -1,4 +1,4 @@
-# The app that is used to test shorebird release/patch
+# The app used to test shorebird release/patch
 
 Shorebird
 https://shorebird.dev/
